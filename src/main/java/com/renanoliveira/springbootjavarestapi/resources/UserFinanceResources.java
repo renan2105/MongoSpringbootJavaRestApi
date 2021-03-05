@@ -1,6 +1,8 @@
 package com.renanoliveira.springbootjavarestapi.resources;
 
 import com.renanoliveira.springbootjavarestapi.domain.*;
+import com.renanoliveira.springbootjavarestapi.services.UserFinancesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,13 +16,13 @@ import java.util.List;
 @RequestMapping(value = "/userFinances")
 public class UserFinanceResources {
 
+    @Autowired
+    private UserFinancesService userFinancesService;
+
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<UserFinance>> findAll(){
-        UserFinance userFinance = new UserFinance("123", "46111058819", "Renan Oliveira da Silva", new ArrayList<>(),  22, new ArrayList<>(), new ArrayList<>());
-        UserFinance userFinance1 = new UserFinance("1234", "46111058818", "Renana Oliveiro do Silvo", new ArrayList<>(),  23, new ArrayList<>(), new ArrayList<>());
 
-        List<UserFinance> userFinances = new ArrayList<>();
-        userFinances.addAll(Arrays.asList(userFinance, userFinance1));
+        List<UserFinance> userFinances = userFinancesService.findAll();
 
         return ResponseEntity.ok().body(userFinances);
     }
