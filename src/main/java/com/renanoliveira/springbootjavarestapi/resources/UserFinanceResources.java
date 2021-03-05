@@ -5,6 +5,7 @@ import com.renanoliveira.springbootjavarestapi.dto.UserFinanceDTO;
 import com.renanoliveira.springbootjavarestapi.services.UserFinancesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +29,14 @@ public class UserFinanceResources {
         List<UserFinanceDTO> userFinancesDto = userFinances.stream().map(x -> new UserFinanceDTO(x)).collect(Collectors.toList());
 
         return ResponseEntity.ok().body(userFinancesDto);
+    }
+
+    @RequestMapping(value= "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<UserFinanceDTO> findById(@PathVariable String id){
+
+        UserFinance userFinance = userFinancesService.findById(id);
+
+        return ResponseEntity.ok().body(new UserFinanceDTO(userFinance));
     }
 
 }
