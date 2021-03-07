@@ -50,7 +50,7 @@ public class UserFinancesService {
     }
 
     public UserFinance fromDTO(UserFinanceDTO userFinanceDTO){
-        return new UserFinance(userFinanceDTO.getId(), userFinanceDTO.getDocument(), userFinanceDTO.getName(), userFinanceDTO.getAge());
+        return new UserFinance(userFinanceDTO.getId(), userFinanceDTO.getDocument(), userFinanceDTO.getName(), userFinanceDTO.getAddress(), userFinanceDTO.getAge());
     }
 
 }

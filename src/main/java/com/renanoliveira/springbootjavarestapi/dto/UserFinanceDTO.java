@@ -1,5 +1,6 @@
 package com.renanoliveira.springbootjavarestapi.dto;
 
+import com.renanoliveira.springbootjavarestapi.domain.Address;
 import com.renanoliveira.springbootjavarestapi.domain.UserFinance;
 
 import java.io.Serializable;
@@ -14,7 +15,7 @@ public class UserFinanceDTO implements Serializable {
 
 //    private List<Debt> debts;
 
-//    private Address address;
+    private Address address;
 
     private Integer age;
 
@@ -26,12 +27,13 @@ public class UserFinanceDTO implements Serializable {
     public UserFinanceDTO() {
     }
 
-    public UserFinanceDTO(UserFinance obj) {
+    public UserFinanceDTO(UserFinance userFinance) {
 
-        id = obj.getId();
-        document = obj.getDocument();
-        name = obj.getName();
-        age = obj.getAge();
+        id = userFinance.getId();
+        document = userFinance.getDocument();
+        name = userFinance.getName();
+        age = userFinance.getAge();
+        address = userFinance.getAddress();
 
     }
 
@@ -58,6 +60,14 @@ public class UserFinanceDTO implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public Integer getAge() {

@@ -18,7 +18,7 @@ public class UserFinance implements Serializable {
 
 //    private List<Debt> debts;
 
-//    private Address address;
+    private Address address;
 
     private Integer age;
 
@@ -30,10 +30,11 @@ public class UserFinance implements Serializable {
     public UserFinance() {
     }
 
-    public UserFinance(String id, String document, String name, Integer age) {
+    public UserFinance(String id, String document, String name, Address address, Integer age) {
         this.id = id;
         this.document = document;
         this.name = name;
+        this.address = address;
         this.age = age;
     }
 
@@ -62,6 +63,14 @@ public class UserFinance implements Serializable {
         this.name = name;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     public Integer getAge() {
         return age;
     }
@@ -69,5 +78,4 @@ public class UserFinance implements Serializable {
     public void setAge(Integer age) {
         this.age = age;
     }
-
 }
