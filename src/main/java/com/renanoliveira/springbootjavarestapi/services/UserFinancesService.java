@@ -16,7 +16,6 @@ public class UserFinancesService {
     private UserFinanceRepository userFinanceRepository;
 
     public List<UserFinance> findAll(){
-
         return userFinanceRepository.findAll();
     }
 
@@ -26,15 +25,16 @@ public class UserFinancesService {
     }
 
     public UserFinance insert(UserFinance userFinance){
-
         return userFinanceRepository.insert(userFinance);
+    }
 
+    public void delete(String id){
+        findById(id);
+        userFinanceRepository.deleteById(id);
     }
 
     public UserFinance fromDTO(UserFinanceDTO userFinanceDTO){
-
         return new UserFinance(userFinanceDTO.getId(), userFinanceDTO.getDocument(), userFinanceDTO.getName(), userFinanceDTO.getAge());
-
     }
 
 }

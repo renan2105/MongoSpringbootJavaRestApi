@@ -49,4 +49,11 @@ public class UserFinanceResources {
         return ResponseEntity.created(uri).build();
     }
 
+    @RequestMapping(value= "/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<UserFinanceDTO> delete(@PathVariable String id){
+
+        userFinancesService.delete(id);
+
+        return ResponseEntity.noContent().build();
+    }
 }
