@@ -33,6 +33,22 @@ public class UserFinancesService {
         userFinanceRepository.deleteById(id);
     }
 
+    public UserFinance update(UserFinance userFinance) {
+
+        UserFinance userFinanceDB = userFinanceRepository.findById(userFinance.getId()).get();
+        updateData(userFinanceDB, userFinance);
+
+        return userFinanceRepository.save(userFinanceDB);
+    }
+
+    public void updateData(UserFinance userFinanceDB, UserFinance userFinance){
+
+        userFinanceDB.setDocument(userFinance.getDocument());
+        userFinanceDB.setName(userFinance.getName());
+        userFinanceDB.setAge(userFinance.getAge());
+
+    }
+
     public UserFinance fromDTO(UserFinanceDTO userFinanceDTO){
         return new UserFinance(userFinanceDTO.getId(), userFinanceDTO.getDocument(), userFinanceDTO.getName(), userFinanceDTO.getAge());
     }

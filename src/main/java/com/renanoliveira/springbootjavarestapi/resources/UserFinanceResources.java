@@ -56,4 +56,15 @@ public class UserFinanceResources {
 
         return ResponseEntity.noContent().build();
     }
+
+    @RequestMapping(value= "/{id}",method = RequestMethod.PUT)
+    public ResponseEntity<Void> update(@PathVariable String id ,@RequestBody UserFinanceDTO userFinanceDTO){
+
+        UserFinance userFinance = userFinancesService.fromDTO(userFinanceDTO);
+        userFinance.setId(id);
+        userFinance = userFinancesService.update(userFinance);
+
+        return ResponseEntity.noContent().build();
+    }
+
 }
