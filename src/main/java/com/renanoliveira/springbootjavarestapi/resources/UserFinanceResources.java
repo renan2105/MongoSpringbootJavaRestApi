@@ -3,13 +3,13 @@ package com.renanoliveira.springbootjavarestapi.resources;
 import com.renanoliveira.springbootjavarestapi.domain.*;
 import com.renanoliveira.springbootjavarestapi.dto.UserFinanceDTO;
 import com.renanoliveira.springbootjavarestapi.services.UserFinancesService;
+import com.sun.jndi.toolkit.url.Uri;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -37,6 +37,16 @@ public class UserFinanceResources {
         UserFinance userFinance = userFinancesService.findById(id);
 
         return ResponseEntity.ok().body(new UserFinanceDTO(userFinance));
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<Void> insert(@RequestBody UserFinanceDTO userFinanceDTO){
+
+        UserFinance userFinance = userFinancesService.fromDTO(userFinanceDTO);
+        userFinance = userFinancesService.insert(userFinance);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userFinance.getId()).toUri();
+
+        return ResponseEntity.created(uri).build();
     }
 
 }
