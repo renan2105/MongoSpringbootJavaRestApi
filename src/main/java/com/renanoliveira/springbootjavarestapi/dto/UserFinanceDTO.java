@@ -1,9 +1,9 @@
 package com.renanoliveira.springbootjavarestapi.dto;
 
-import com.renanoliveira.springbootjavarestapi.domain.Address;
 import com.renanoliveira.springbootjavarestapi.domain.UserFinance;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class UserFinanceDTO implements Serializable {
 
@@ -13,15 +13,15 @@ public class UserFinanceDTO implements Serializable {
 
     private String name;
 
-//    private List<Debt> debts;
+    private List<DebtDTO> debts;
 
-    private Address address;
+    private AddressDTO address;
 
     private Integer age;
 
-//    private List<Patrimony> patrimonies;
+    private List<PatrimonyDTO> patrimonys;
 
-//    private List<SourceIncome> incomeSources;
+    private List<SourceIncomeDTO> sourceIncomes;
 
 
     public UserFinanceDTO() {
@@ -32,8 +32,11 @@ public class UserFinanceDTO implements Serializable {
         id = userFinance.getId();
         document = userFinance.getDocument();
         name = userFinance.getName();
-        age = userFinance.getAge();
+        debts = userFinance.getDebts();
         address = userFinance.getAddress();
+        age = userFinance.getAge();
+        patrimonys = userFinance.getPatrimonys();
+        sourceIncomes = userFinance.getSourceIncomes();
 
     }
 
@@ -62,11 +65,19 @@ public class UserFinanceDTO implements Serializable {
         this.name = name;
     }
 
-    public Address getAddress() {
+    public List<DebtDTO> getDebts() {
+        return debts;
+    }
+
+    public void setDebts(List<DebtDTO> debts) {
+        this.debts = debts;
+    }
+
+    public AddressDTO getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(AddressDTO address) {
         this.address = address;
     }
 
@@ -76,5 +87,21 @@ public class UserFinanceDTO implements Serializable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public List<PatrimonyDTO> getPatrimonys() {
+        return patrimonys;
+    }
+
+    public void setPatrimonys(List<PatrimonyDTO> patrimonys) {
+        this.patrimonys = patrimonys;
+    }
+
+    public List<SourceIncomeDTO> getSourceIncomes() {
+        return sourceIncomes;
+    }
+
+    public void setSourceIncomes(List<SourceIncomeDTO> sourceIncomes) {
+        this.sourceIncomes = sourceIncomes;
     }
 }

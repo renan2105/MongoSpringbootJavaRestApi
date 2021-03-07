@@ -45,12 +45,18 @@ public class UserFinancesService {
 
         userFinanceDB.setDocument(userFinance.getDocument());
         userFinanceDB.setName(userFinance.getName());
+        userFinanceDB.setAddress(userFinance.getAddress());
+        userFinanceDB.setDebts(userFinance.getDebts());
         userFinanceDB.setAge(userFinance.getAge());
+        userFinanceDB.setPatrimonys(userFinance.getPatrimonys());
+        userFinanceDB.setSourceIncomes(userFinance.getSourceIncomes());
 
     }
 
     public UserFinance fromDTO(UserFinanceDTO userFinanceDTO){
-        return new UserFinance(userFinanceDTO.getId(), userFinanceDTO.getDocument(), userFinanceDTO.getName(), userFinanceDTO.getAddress(), userFinanceDTO.getAge());
+        return new UserFinance(userFinanceDTO.getId(), userFinanceDTO.getDocument(), userFinanceDTO.getName(),
+                userFinanceDTO.getDebts(), userFinanceDTO.getAddress(), userFinanceDTO.getAge(),
+                userFinanceDTO.getPatrimonys(), userFinanceDTO.getSourceIncomes());
     }
 
 }

@@ -1,6 +1,6 @@
-package com.renanoliveira.springbootjavarestapi.domain;
+package com.renanoliveira.springbootjavarestapi.dto;
 
-public class Address{
+public class AddressDTO {
 
     private String street;
 
@@ -15,10 +15,10 @@ public class Address{
     private String complement;
 
 
-    public Address() {
+    public AddressDTO() {
     }
 
-    public Address(String street, String district, String city, String state, String country, String complement) {
+    public AddressDTO(String street, String district, String city, String state, String country, String complement) {
         this.street = street;
         this.district = district;
         this.city = city;
