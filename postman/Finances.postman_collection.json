@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "747d1a49-beed-4ee1-8677-0485e8f9637b",
+		"name": "Finances",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserFinances",
+			"item": [
+				{
+					"name": "Userfinances/findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userFinances/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userFinances",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Userfinances/findByDocument",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userFinances/findByDocument/46111058818",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userFinances",
+								"findByDocument",
+								"46111058818"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Userfinances/findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userFinances/findById/60458012d2dc0e7dcb27bdd0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userFinances",
+								"findById",
+								"60458012d2dc0e7dcb27bdd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Userfinances/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userFinances/delete/60451774930bf467a3af1741",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userFinances",
+								"delete",
+								"60451774930bf467a3af1741"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Userfinances/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"document\": \"46111058819\",\r\n    \"name\": \"Renan Oliveira da Silva\",\r\n    \"age\": 23\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userFinances/update/60451c78e977ad20cb9d5492",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userFinances",
+								"update",
+								"60451c78e977ad20cb9d5492"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Userfinances/insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"document\": \"11111111111\",\r\n    \"name\": \"Ruan Oliveira da Silva\",\r\n    \"age\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userFinances/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userFinances",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Traceability",
+			"item": [
+				{
+					"name": "traceabilitys/findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/traceabilitys/findAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"traceabilitys",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traceabilitys/findByDocument",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/traceabilitys/findByDocument/46111058818",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"traceabilitys",
+								"findByDocument",
+								"46111058818"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traceabilitys/findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/traceabilitys/findById/60458012d2dc0e7dcb27bdd0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"traceabilitys",
+								"findById",
+								"60458012d2dc0e7dcb27bdd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traceabilitys/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/traceabilitys/60451774930bf467a3af1741",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"traceabilitys",
+								"60451774930bf467a3af1741"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traceabilitys/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"document\": \"46111058819\",\r\n    \"name\": \"Renan Oliveira da Silva\",\r\n    \"age\": 23\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/traceabilitys/update/60451c78e977ad20cb9d5492",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"traceabilitys",
+								"update",
+								"60451c78e977ad20cb9d5492"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traceabilitys/insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"document\": \"11111111111\",\r\n    \"name\": \"Ruan Oliveira da Silva\",\r\n    \"age\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/traceabilitys/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"traceabilitys",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
