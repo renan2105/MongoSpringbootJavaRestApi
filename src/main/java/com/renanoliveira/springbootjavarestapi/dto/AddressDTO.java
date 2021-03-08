@@ -1,6 +1,8 @@
 package com.renanoliveira.springbootjavarestapi.dto;
 
-public class AddressDTO {
+import java.io.Serializable;
+
+public class AddressDTO implements Serializable {
 
     private String street;
 
