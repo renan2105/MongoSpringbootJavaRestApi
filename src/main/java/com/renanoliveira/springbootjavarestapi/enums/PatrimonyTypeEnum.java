@@ -1,4 +1,4 @@
-package com.renanoliveira.springbootjavarestapi;
+package com.renanoliveira.springbootjavarestapi.enums;
 
 public enum PatrimonyTypeEnum {
 

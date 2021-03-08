@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserFinanceRepository extends MongoRepository<UserFinance, String> {
 
-
+    UserFinance findByDocumentContaining(String document);
 
 }

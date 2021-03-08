@@ -41,6 +41,10 @@ public class UserFinancesService {
         return userFinanceRepository.save(userFinanceDB);
     }
 
+    public UserFinance findByDocument(String document){
+        return userFinanceRepository.findByDocumentContaining(document);
+    }
+
     public void updateData(UserFinance userFinanceDB, UserFinance userFinance){
 
         userFinanceDB.setDocument(userFinance.getDocument());

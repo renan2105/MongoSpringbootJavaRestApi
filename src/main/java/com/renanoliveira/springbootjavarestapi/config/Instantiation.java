@@ -1,6 +1,6 @@
 package com.renanoliveira.springbootjavarestapi.config;
 
-import com.renanoliveira.springbootjavarestapi.PatrimonyTypeEnum;
+import com.renanoliveira.springbootjavarestapi.enums.PatrimonyTypeEnum;
 import com.renanoliveira.springbootjavarestapi.dto.AddressDTO;
 import com.renanoliveira.springbootjavarestapi.dto.DebtDTO;
 import com.renanoliveira.springbootjavarestapi.domain.UserFinance;

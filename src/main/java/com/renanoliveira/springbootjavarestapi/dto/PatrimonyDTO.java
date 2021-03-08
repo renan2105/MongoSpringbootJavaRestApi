@@ -1,6 +1,6 @@
 package com.renanoliveira.springbootjavarestapi.dto;
 
-import com.renanoliveira.springbootjavarestapi.PatrimonyTypeEnum;
+import com.renanoliveira.springbootjavarestapi.enums.PatrimonyTypeEnum;
 
 import java.io.Serializable;
 
