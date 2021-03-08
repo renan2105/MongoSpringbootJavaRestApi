@@ -7,11 +7,13 @@ Utilizando Java 8, SpringBoot, SpringData e MongoDB.
 
 Para utilizacao e necessario ter MongoDB, Maven, java 8 e Postman.
 
-1. Inicie o MongoDB.
+1. Inicie o MongoDB usando o comando "mongod" pelo cmd.
 
 2. Rode a aplicacao entrando na pasta base do projeto pelo cmd e usando o comando "mvn spring-boot:run"
 
 3. Importe no postman o json "Finances.postman_collection.json" que se encontra dentro da pasta "postman" e utilize do jeito que quiser.
+
+Obs. Ao rodar o projeto eh apagado toda as informacoes do banco e adicionado uma carga inicial.
 
 # Ideias futuras
 
